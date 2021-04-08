@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
 }
 
 h1, h2 {
@@ -18,8 +18,7 @@ header {
     z-index: 1;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     overflow-x: hidden;
 }
 
