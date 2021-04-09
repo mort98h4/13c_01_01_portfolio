@@ -1,3 +1,11 @@
+:root {
+    --primCol: rgba(48, 200, 217, 1);
+    --secoCol: rgba(32, 99, 140, 1);
+    --thirCol: rgba(68, 242, 225, 1);;
+    --highCol: rgba(216, 154, 217, 1);
+    --bgCol: rgba(13, 13, 13, 1);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +14,8 @@
 }
 
 body {
-    background-color: rgba(13, 13, 13, 1);
+    /* background-color: rgba(13, 13, 13, 1); */
+    background-color: var(--bgCol);
 }
 
 main {
@@ -21,7 +30,7 @@ h1 {
 }
 
 h2, p {
-    color: white;
+    color: var(--primCol);
 }
 
 img {
@@ -52,7 +61,7 @@ header {
 }
 
 .startTag, .endTag {
-    color: rgba(32, 99, 140, 1);
+    color: var(--secoCol);
     font-size: 2.5rem;
 }
 
@@ -60,8 +69,8 @@ header {
     /* color: rgba(48, 200, 217, 1); */
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: .033em rgba(48, 200, 217, 1);
-    text-shadow: 0 0 20px rgba(68, 242, 225, 1);
+    -webkit-text-stroke: .033em var(--primCol);
+    text-shadow: 0 0 20px var(--thirCol);
     padding-left: 3rem;
     font-size: 3rem;
 }
@@ -78,6 +87,31 @@ header {
 svg {
     width: 100%;
     height: 100%;
+}
+
+/***** #aboutShort *****/
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content .text {
+    flex-grow: 1;
+    flex-basis: 50%;
+    padding: 1rem;
+}
+
+.content .image {
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 1rem;
+}
+
+.image img {
+    clip-path: circle(44% at 50% 44%);
 }
 
 @media screen and (min-width: 768px) {
