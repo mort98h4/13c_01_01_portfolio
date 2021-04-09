@@ -160,13 +160,47 @@ article {
 }
 
 .image img {
-    clip-path: circle(44% at 50% 44%);
+    clip-path: circle(50% at 50% 50%);
 }
 
+/***** Footer *****/
 .footerContent {
     max-width: 1200px;
     margin: 0 auto;
     border-top: 2px solid var(--highCol);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.links {
+    display: flex;
+}
+
+.socialLink {
+    max-width: 50px;
+    margin: 0 1rem 2rem;
+}
+
+.socialIcon {
+    fill: var(--primCol);
+}
+
+.socialIcon:hover {
+    fill: var(--highCol);
+    transition: all 0.15s ease-out;
+}
+
+.contactInfo {
+    color: var(--highCol);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 @media screen and (min-width: 768px) {
