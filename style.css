@@ -184,7 +184,7 @@ article {
 }
 
 .socialIcon {
-    fill: var(--primCol);
+    fill: var(--secoCol);
 }
 
 .socialIcon:hover {
@@ -193,14 +193,14 @@ article {
 }
 
 .contactInfo {
-    color: var(--primCol);
+    color: var(--secoCol);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     line-height: 1.5;
 }
 
 .contactInfo a {
-    color: var(--primCol);
+    color: var(--secoCol);
     font-size: initial;
     font-weight: 600;
     transition: all 0.15s ease-out;
