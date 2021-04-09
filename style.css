@@ -24,13 +24,16 @@ main {
 }
 
 h1, h2 {
-    font-size: 3rem;
     font-weight: 200;
     font-family: 'Source Code Pro', monospace;
 }
 
-h2 {
+h1 {
     font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -97,7 +100,7 @@ header {
 
 .startTag, .endTag {
     color: var(--secoCol);
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .tagContent {
@@ -127,6 +130,7 @@ article {
     align-items: center;
     min-height: 100vh;
     padding: 0 1rem;
+    margin-bottom: 2rem;
 }
 
 .content, .image {
@@ -225,13 +229,22 @@ ul {
         font-size: 4rem;
     }
 
+    .startTag, .endTag {
+        font-size: 2.5rem;
+    }
+
     /***** #aboutShort *****/
     article {
         flex-direction: row;
+        margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 1024px) {
+    h2 {
+        font-size: 3rem;
+    }
+
     /***** HEADER SECTION *****/
     .title {
         padding: 4rem 1rem;
