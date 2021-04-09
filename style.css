@@ -41,10 +41,31 @@ h2 {
     text-shadow: 0 0 20px var(--thirCol);
 }
  
-p {
+p, a {
     color: rgb(224 248 251);
-    font-family: sans-serif;
     font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.btn {
+    cursor: pointer;
+    width: 250px;
+    text-align: center;
+    background-color: var(--primCol);
+    padding: 1rem 0;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.15s ease-out;
+}
+
+.btn:hover {
+    color: var(--bgCol);
+    background-color: var(--highCol);
 }
 
 img {
@@ -80,7 +101,6 @@ header {
 }
 
 .tagContent {
-    /* color: rgba(48, 200, 217, 1); */
     padding-left: 3rem;
 }
 
@@ -99,24 +119,44 @@ svg {
 }
 
 /***** #aboutShort *****/
-.content {
+article {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
+    padding: 0 1rem;
 }
 
-.content .text {
+.content, .image {
     flex-grow: 1;
     flex-basis: 50%;
     padding: 1rem;
+    margin: 0 auto;
 }
 
-.content .image {
-    flex-grow: 1;
-    flex-basis: 300px;
-    padding: 1rem;
+.content {
+    max-width: 600px;
+}
+
+.image {
+    max-width: 400px;
+}
+
+.text {
+    margin-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn:first-child {
+    margin-bottom: 1rem;
 }
 
 .image img {
@@ -131,6 +171,11 @@ svg {
 
     .tagContent {
         font-size: 4rem;
+    }
+
+    /***** #aboutShort *****/
+    article {
+        flex-direction: row;
     }
 }
 
@@ -147,5 +192,15 @@ svg {
     .tagContent {
         padding-left: 4rem;
         font-size: 5rem;
+    }
+
+    /***** #aboutShort *****/
+    .buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .btn:first-child {
+        margin-bottom: 0;
     }
 }
