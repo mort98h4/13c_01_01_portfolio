@@ -163,6 +163,12 @@ article {
     clip-path: circle(44% at 50% 44%);
 }
 
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 2px solid var(--highCol);
+}
+
 @media screen and (min-width: 768px) {
     /***** HEADER SECTION *****/
     .title {
