@@ -4,6 +4,7 @@
     --thirCol: rgba(68, 242, 225, 1);;
     --highCol: rgba(216, 154, 217, 1);
     --bgCol: rgba(13, 13, 13, 1);
+    --textCol: rgba(224, 248, 251, 1);
 }
 
 * {
@@ -45,7 +46,7 @@ h2 {
 }
  
 p, a {
-    color: rgb(224 248 251);
+    color: var(--textCol);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -75,8 +76,90 @@ img {
     width: 100%;
 }
 
-/***** HEADER SECTION *****/
+/***** MENU *****/
 header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.linksContainer {
+    /* position: fixed;
+    right: 0px;
+    top: 7vh; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #17253e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in;
+    overflow: hidden;
+    padding-top: 20px;
+    pointer-events: none;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+}
+
+.navLinks a {
+    pointer-events: visible;
+}
+
+.burgerMenu {
+    display: block;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.burger {
+    height: 2px;
+    background-color: var(--textCol);
+    margin: .3rem;
+    transition: transform 0.5s ease, background-color 0.15s ease-out;
+    width: 23px;
+}
+
+/* .burger:hover {
+    background-color: var(--highCol);
+} */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(-45deg) translate(-5px, -5px);
+}
+
+.navActive {
+    transform: translate(0%);
+}
+
+/***** HEADER SECTION *****/
+#splash {
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(to bottom, rgba(216, 154, 217, 0.52), rgba(32, 99, 140, 0.73)), url("assets/splash_img.png");
@@ -115,6 +198,7 @@ header {
     position: absolute;
     bottom: 0;
     right: 0;
+    pointer-events: none;
 }
 
 svg {
