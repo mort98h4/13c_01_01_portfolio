@@ -23,14 +23,28 @@ main {
     margin: 0 auto;
 }
 
-h1 {
-    /* color: rgb(0, 110, 153); */
+h1, h2 {
+    font-size: 3rem;
     font-weight: 200;
     font-family: 'Source Code Pro', monospace;
 }
 
-h2, p {
-    color: var(--primCol);
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header {
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .033em var(--primCol);
+    text-shadow: 0 0 20px var(--thirCol);
+}
+ 
+p {
+    color: rgb(224 248 251);
+    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 img {
@@ -67,12 +81,7 @@ header {
 
 .tagContent {
     /* color: rgba(48, 200, 217, 1); */
-    text-transform: uppercase;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: .033em var(--primCol);
-    text-shadow: 0 0 20px var(--thirCol);
     padding-left: 3rem;
-    font-size: 3rem;
 }
 
 .polygon {
