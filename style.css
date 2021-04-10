@@ -101,7 +101,7 @@ nav {
     align-items: center;
     width: 100%;
     transform: translateY(-100%);
-    transition: transform 0.5s ease-in;
+    transition: transform 1s cubic-bezier(.25,.48,.57,1.21);
     overflow: hidden;
     padding-top: 20px;
     pointer-events: none;
@@ -162,10 +162,6 @@ nav {
     transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.15s ease-out;
     width: 23px;
 }
-
-/* .burger:hover {
-    background-color: var(--highCol);
-} */
 
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 5px);
