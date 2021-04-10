@@ -227,6 +227,17 @@ svg {
     height: 100%;
 }
 
+.blackOut {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgCol);
+    z-index: 11;
+}
+
 /***** #aboutShort *****/
 article {
     display: flex;
