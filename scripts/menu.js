@@ -24,5 +24,16 @@ export function burgerMenu() {
         // Tilføjer/fjerner "animation" på burgermenu
         burger.classList.toggle("toggle");
     });
+
+    gsap.to("nav", {
+        backgroundColor: "var(--bgCol)",
+        ease: "ease-in",
+        scrollTrigger: {
+            trigger: "#splash",
+            scrub: true,
+            start: "85%",
+            end: "bottom"
+        }
+    })
 }
 
