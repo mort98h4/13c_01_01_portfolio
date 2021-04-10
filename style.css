@@ -310,10 +310,6 @@ article {
 
 .socialIcon {
     fill: var(--secoCol);
-}
-
-.socialIcon:hover {
-    fill: var(--highCol);
     transition: all 0.15s ease-out;
 }
 
