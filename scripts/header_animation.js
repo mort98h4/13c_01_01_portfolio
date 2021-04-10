@@ -1,6 +1,6 @@
 "use strict"; 
 
-export function fadeInAnimation(startTag, endTag, tagContent) {
+export function fadeInAnimation(startTag, endTag) {
     const blackOut = document.querySelector(".blackOut");
 
     const blackProp = {
@@ -69,6 +69,18 @@ export function fadeInAnimation(startTag, endTag, tagContent) {
     
         header.animate(headerKF, headerProp);
     }
+
+    gsap.to("#splash", {
+        backgroundPosition: `50% 30%`,
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#splash",
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            markers: true
+        }
+    })
 }
 
 function randomNumber() {
