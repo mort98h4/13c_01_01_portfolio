@@ -336,7 +336,7 @@ ul {
 }
 
 /***** PROJECTS.HTML *****/
-#3rdSemester, #2ndSemester, #1stSemester {
+#3rdSemester, #2ndSemester, #1stSemester article {
     min-height: 100vh;
 }
 
