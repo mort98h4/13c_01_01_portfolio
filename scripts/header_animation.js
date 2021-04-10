@@ -77,8 +77,7 @@ export function fadeInAnimation(startTag, endTag) {
             trigger: "#splash",
             start: "top top",
             end: "bottom top",
-            scrub: true,
-            markers: true
+            scrub: true
         }
     })
 }
