@@ -25,6 +25,11 @@ export function burgerMenu() {
         burger.classList.toggle("toggle");
     });
 
+    document.querySelector(".navLinks a").addEventListener("click", () => {
+        nav.classList.toggle("navActive");
+        burger.classList.toggle("toggle");
+    })
+
     gsap.to("nav", {
         backgroundColor: "var(--bgCol)",
         ease: "ease-in",
