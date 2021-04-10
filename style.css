@@ -209,6 +209,7 @@ nav {
 }
 
 .tagContent {
+    opacity: 0;
     padding-left: 3rem;
 }
 
