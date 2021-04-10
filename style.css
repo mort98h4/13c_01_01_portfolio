@@ -91,14 +91,11 @@ nav {
 }
 
 .linksContainer {
-    /* position: fixed;
-    right: 0px;
-    top: 7vh; */
     position: absolute;
     right: 0;
     top: 0;
     height: 100vh;
-    background-color: #17253e;
+    background-color: var(--bgCol);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,8 +117,36 @@ nav {
     max-width: 1200px;
 }
 
+.linkGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.navSubLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .navLinks a {
     pointer-events: visible;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .033em var(--primCol);
+    text-shadow: 0 0 20px var(--thirCol);
+    transition: all 0.15s ease-out;
+    font-size: 2rem;
+}
+
+.navLinks a:hover {
+    -webkit-text-stroke: .033em var(--highCol);
+    text-shadow: 0 0 20px var(--highCol);
+}
+
+.subLink {
+    font-size: 1rem !important;
+    line-height: 2;
 }
 
 .burgerMenu {
@@ -305,6 +330,24 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+    /***** MENU *****/
+    .navLinks {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .linkContainer {
+        flex-grow: 1;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navSubLinks {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
     /***** HEADER SECTION *****/
     .title {
         padding: 4rem 2rem;
@@ -328,6 +371,25 @@ ul {
 @media screen and (min-width: 1024px) {
     h2 {
         font-size: 3rem;
+    }
+
+    /***** MENU *****/
+    .burger {
+        height: 3px;
+        margin: .4rem;
+        width: 30px;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .linkContainer {
+        flex-basis: 25%;
+    }
+
+    .navSubLinks {
+        flex-basis: 25%;
     }
 
     /***** HEADER SECTION *****/
