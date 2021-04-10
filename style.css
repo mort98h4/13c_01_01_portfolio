@@ -21,7 +21,6 @@ body {
 }
 
 main {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -251,7 +250,7 @@ article {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 0 1rem;
