@@ -17,6 +17,7 @@
 body {
     /* background-color: rgba(13, 13, 13, 1); */
     background-color: var(--bgCol);
+    overflow-x: hidden;
 }
 
 main {
@@ -85,6 +86,8 @@ header {
     z-index: 10;
 }
 nav {
+    background-color: transparent;
+    transition: all 0.15s ease-in;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -93,7 +96,7 @@ nav {
 .linksContainer {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -100vh;
     height: 100vh;
     background-color: var(--bgCol);
     display: flex;
@@ -176,7 +179,7 @@ nav {
 }
 
 .navActive {
-    transform: translate(0%);
+    transform: translateY(100vh);
 }
 
 /***** HEADER SECTION *****/
@@ -240,6 +243,10 @@ svg {
 }
 
 /***** #aboutShort *****/
+#aboutShort {
+    overflow: hidden;
+}
+
 article {
     display: flex;
     flex-wrap: wrap;
@@ -251,19 +258,17 @@ article {
     margin-bottom: 2rem;
 }
 
-.content, .image {
-    flex-grow: 1;
-    flex-basis: 50%;
-    padding: 1rem;
-    margin: 0 auto;
-}
-
 .content {
+    opacity: 0;
+    transform: translateY(50vh);
     max-width: 600px;
 }
 
 .image {
+    opacity: 0;
+    transform: translateX(25vw);
     max-width: 400px;
+    padding: 2rem;
 }
 
 .text {
@@ -374,6 +379,11 @@ ul {
         flex-direction: row;
         margin-bottom: 0;
     }
+
+    .image, .content {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -417,7 +427,7 @@ ul {
     /***** #aboutShort *****/
     .buttons {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .btn:first-child {
