@@ -95,6 +95,9 @@ function displayProjects(projects) {
         clone.querySelector("img").src = project.image;
         clone.querySelector("img").alt = project.project;
         clone.querySelector("article").setAttribute("id", `article${project.id}`);
+        clone.querySelector("div .btn").addEventListener("click", () => {
+            displayDetails(project);
+        })
 
         if (project.semester === 3) {
             dest3.appendChild(clone);
@@ -139,5 +142,18 @@ function displayProjects(projects) {
     }
 
     scrollAnimation();
+}
 
+function displayDetails(project) {
+    document.querySelector("#projectDetails").classList.remove("hide");
+    document.querySelector("#projectDetails h3").textContent = project.project;
+    document.querySelector("#projectDetails p").textContent = project.longDesc;
+    document.querySelector("#projectDetails img").src = project.image;
+    document.querySelector("#projectDetails img").alt = project.project;
+    document.querySelector("#projectDetails a").href = project.url;
+    document.querySelector("#projectDetails .close").addEventListener("click", closeProjectDetails);
+    function closeProjectDetails() {
+        document.querySelector("#projectDetails .close").removeEventListener("click", closeProjectDetails);
+        document.querySelector("#projectDetails").classList.add("hide");
+    }
 }
