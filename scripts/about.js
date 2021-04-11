@@ -3,10 +3,10 @@
 const startTag = document.querySelector(".startTag").textContent;
 const endTag = document.querySelector(".endTag").textContent;
 
-import { fadeInAnimation } from "/../scripts/header_animation.js";
-import {burgerMenu} from "/../scripts/menu.js";
-import {scrollAnimation} from "/../scripts/index_scroll.js";
-import {changeIconColor} from "/../scripts/social_icons.js";
+import { fadeInAnimation } from "./header_animation.js";
+import {burgerMenu} from "./menu.js";
+import {scrollAnimation} from "./index_scroll.js";
+import {changeIconColor} from "./social_icons.js";
 
 window.addEventListener("DOMContentLoaded", init);
 

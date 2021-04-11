@@ -6,10 +6,10 @@ const endTag = document.querySelector(".endTag").textContent;
 let filterBy = "all";
 let allProjects;
 
-import {burgerMenu} from "/../scripts/menu.js";
-import {fadeInAnimation} from "../scripts/header_animation.js";
-import {scrollAnimation} from "../scripts/projects_scroll.js";
-import {changeIconColor} from "/../scripts/social_icons.js";
+import {burgerMenu} from "./menu.js";
+import {fadeInAnimation} from "./header_animation.js";
+import {scrollAnimation} from "./projects_scroll.js";
+import {changeIconColor} from "./social_icons.js";
 
 window.addEventListener("DOMContentLoaded", init);
 
