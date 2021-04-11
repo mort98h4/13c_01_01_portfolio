@@ -1,13 +1,24 @@
 [
     {
-        "project": "12c.03.01 Advanced Animation Project",
+        "id": 11,
+        "project": "12c.03.01 Advanced Animation: Mr. Potatohead Configurator",
         "semester": 3,
-        "shortDesc": "A short description of the Advanced Animation Project",
-        "longDesc": "A looooooooooooooooooooooooong description of the Advanced Animation Project",
+        "shortDesc": "A short description of the Advanced Animation: Mr. Potatohead Configurator",
+        "longDesc": "A looooooooooooooooooooooooong description of the Advanced Animation: Mr. Potatohead Configurator",
         "url": "http://mortengross.dk/kea/12_advanced_animation/12c_03_01_advanced_animation_project/potato_head/frontpage.html",
         "image": "../assets/projects/12c_03_01.png"
     },
     {
+        "id": 10,
+        "project": "11c.04.04 Coding Visual Design: Hacked Hogwarts Student List",
+        "semester": 3,
+        "shortDesc": "A short description of the 11c.04.04 Coding Visual Design: Hacked Hogwarts Student List",
+        "longDesc": "A looooooooooooooooooooooooong description of the 11c.04.04 Coding Visual Design: Hacked Hogwarts Student List",
+        "url": "http://mortengross.dk/kea/11_coding_visual_design/11c_04_04_hacked_hogwarts_student_list/index.html",
+        "image": "../assets/projects/11c_04_04.png"
+    },
+    {
+        "id": 9,
         "project": "2nd semester exam project: ByKop",
         "semester": 2,
         "shortDesc": "A short description of the 2nd semester exam project: ByKop",
@@ -16,11 +27,75 @@
         "image": "../assets/projects/2nd_semester_exam.png"
     },
     {
+        "id": 8,
+        "project": "09.05.03 Content Management System: IHS",
+        "semester": 2,
+        "shortDesc": "A short description of the 09.05.03 Content Management System: IHS",
+        "longDesc": "A looooooooooooooooooooooooong description of the 09.05.03 Content Management System: IHS",
+        "url": "http://mortengross.dk/kea/09_cms/09_05_03_ihs/index.html",
+        "image": "../assets/projects/09_05_03.png"
+    },
+    {
+        "id": 7,
+        "project": "08.04.02 Campaign Site: Tuborg NUL",
+        "semester": 2,
+        "shortDesc": "A short description of the 08.04.02 Campaign site: Tuborg NUL",
+        "longDesc": "A looooooooooooooooooooooooong description of the 08.04.02 Campaign site: Tuborg NUL",
+        "url": "http://mortengross.dk/kea/08_brugercentreretdesign/08_04_02_kampagnesite/index.html",
+        "image": "../assets/projects/08_04_02.png"
+    },
+    {
+        "id": 6,
+        "project": "07.04.01 Passion site: Nybargynder",
+        "semester": 2,
+        "shortDesc": "A short description of the 07.04.01 Passion site: Nybargynder",
+        "longDesc": "A looooooooooooooooooooooooong description of the 07.04.01 Passion site: Nybargynder",
+        "url": "http://mortengross.dk/kea/07_dynamisk_web/nybargynder_project/index.html",
+        "image": "../assets/projects/07_04_01.png"
+    },
+    {
+        "id": 5,
         "project": "1st semester exam project: Portfolio",
         "semester": 1,
         "shortDesc": "A short description of the 2nd semester exam project: Portfolio",
         "longDesc": "A looooooooooooooooooooooooong description of the 2nd semester exam project: Portfolio",
         "url": "http://mortengross.dk/kea/06_portfolio/index.html",
         "image": "../assets/projects/1st_semester_exam.png"
+    },
+    {
+        "id": 4,
+        "project": "05.03.01 Redesign: www.synnekristineeriksen.com",
+        "semester": 1,
+        "shortDesc": "A short description of the 05.03.01 Redesign: www.synnekristineeriksen.com",
+        "longDesc": "A looooooooooooooooooooooooong description of the 05.03.01 Redesign: www.synnekristineeriksen.com",
+        "url": "http://mortengross.dk/kea/05_content/05_03_01_redesign_og_temadokumentation/index.html",
+        "image": "../assets/projects/05_03_01.png"
+    },
+    {
+        "id": 3,
+        "project": "04.05.01 Individual game: The Corona Game",
+        "semester": 1,
+        "shortDesc": "A short description of the 04.05.01 Individual game: The Corona Game",
+        "longDesc": "A looooooooooooooooooooooooong description of the 04.05.01 Individual game: The Corona Game",
+        "url": "http://mortengross.dk/kea/04_animation/spil/index.html",
+        "image": "../assets/projects/04_05_01.png"
+    },
+    {
+        "id": 2,
+        "project": "03.04.01 Design Sprint: FOMO",
+        "semester": 1,
+        "shortDesc": "A short description of the 03.04.01 Design Sprint: FOMO",
+        "longDesc": "A looooooooooooooooooooooooong description of the 03.04.01 Design Sprint: FOMO",
+        "url": "https://xd.adobe.com/view/386c1b93-07cd-4a9b-79ec-be6738cad930-4e5d/?fullscreen",
+        "image": "../assets/projects/03_04_01.png"
+    },
+    {
+        "id": 1,
+        "project": "02.04.02 Responsive Site: Dadaism",
+        "semester": 1,
+        "shortDesc": "A short description of the 02.04.02 Responsive Site",
+        "longDesc": "A looooooooooooooooooooooooong description of the 02.04.02 Responsive Site",
+        "url": "http://mortengross.dk/kea/02_web/04_responsive/02_04_02_responsive_site_v2/index.html",
+        "image": "../assets/projects/02_04_02.png"
     }
 ]
