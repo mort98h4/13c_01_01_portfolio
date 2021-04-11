@@ -34,7 +34,8 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    max-width: 1000px;
+    margin: 0 auto 1rem;
 }
 
 h3 {
@@ -358,7 +359,7 @@ ul {
     margin-bottom: 3rem;
 }
 
-.project .content, .image {
+.project .content, .project .image {
     opacity: 1;
     transform: translate(0,0);
 }
