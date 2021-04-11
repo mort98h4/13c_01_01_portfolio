@@ -23,7 +23,7 @@ main {
     margin: 0 auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-weight: 200;
     font-family: 'Source Code Pro', monospace;
 }
@@ -37,6 +37,11 @@ h2 {
     margin-bottom: 1rem;
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 .header {
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
@@ -47,6 +52,10 @@ h2 {
 p, a {
     color: var(--textCol);
     font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    margin-bottom: 1rem;
 }
 
 a {
@@ -64,6 +73,9 @@ a {
     text-transform: uppercase;
     font-weight: 600;
     transition: all 0.15s ease-out;
+    color: var(--textCol);
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .btn:hover {
@@ -337,13 +349,15 @@ ul {
 
 /***** PROJECTS.HTML *****/
 #thirdSemester, #secondSemester, #firstSemester article {
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 /***** PROJECTS *****/
 .project {
     min-height: 0 !important;
+    margin-bottom: 3rem;
 }
+
 .project .content, .image {
     opacity: 1;
     transform: translate(0,0);
@@ -394,6 +408,11 @@ ul {
     .image, .content {
         flex-grow: 1;
         flex-basis: 50%;
+    }
+
+    /***** PROJECTS *****/
+    .project:nth-of-type(2n) {
+        flex-direction: row-reverse;
     }
 }
 
