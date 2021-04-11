@@ -464,6 +464,16 @@ ul {
     cursor: pointer;
 }
 
+/***** CONTACT *****/
+#contact .contactInfo {
+    color: var(--textCol);
+    text-align: left;
+}
+
+#contact .links {
+    justify-content: center;
+}
+
 @media screen and (min-width: 768px) {
     /***** MENU *****/
     .navLinks {
@@ -589,7 +599,7 @@ ul {
         width: 250px;
     }
 
-    #aboutShort .btn:first-child {
+    .btn:first-child {
         margin-bottom: 0;
     }
 
@@ -614,5 +624,10 @@ ul {
     #projectDetails .image {
         flex-basis: 50%;
         flex-grow: 1;
+    }
+
+    /***** ABOUT *****/
+    #aboutLong .btn:first-child {
+        margin-bottom: 1rem;
     }
 }
