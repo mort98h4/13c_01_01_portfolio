@@ -2,8 +2,8 @@
 
 export function scrollAnimation() {
     gsap.utils.toArray(".fromLeft").forEach(elem => {
-        console.log(elem.clientHeight);
-        console.log(elem);
+        // console.log(elem.clientHeight);
+        // console.log(elem);
         gsap.to(elem, {
             x: "0px",
             ease: "ease-in",
@@ -17,8 +17,8 @@ export function scrollAnimation() {
         })
     })
     gsap.utils.toArray(".fromRight").forEach(elem => {
-        console.log(elem.clientHeight);
-        console.log(elem);
+        // console.log(elem.clientHeight);
+        // console.log(elem);
         gsap.to(elem, {
             x: "0px",
             ease: "ease-in",
