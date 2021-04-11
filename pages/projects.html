@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="menu">
             <div class="linksContainer">
                 <div class="navLinks">
                     <div class="linkContainer">
@@ -22,9 +22,13 @@
                     </div>
                     <div class="navSubLinks">
                         <a href="projects.html">Projects</a>
-                        <a href="projects.html#3rdSemester" class="subLink">3rd semester</a>
+                        <!-- <a href="projects.html#3rdSemester" class="subLink">3rd semester</a>
                         <a href="projects.html#2ndSemester" class="subLink">2nd semester</a>
-                        <a href="projects.html#1stSemester" class="subLink">1st semester</a>
+                        <a href="projects.html#1stSemester" class="subLink">1st semester</a> -->
+                        <div class="header filterBtn" data-id="all">projects</div>
+                        <div class="header subLink filterBtn" data-id="3">3rd semester</div>
+                        <div class="header subLink filterBtn" data-id="2">2nd semester</div>
+                        <div class="header subLink filterBtn" data-id="1">1st semester</div>
                     </div>
                     <div class="linkContainer">
                         <a href="contact.html">Contact</a>
@@ -54,7 +58,14 @@
             </svg>
         </div>
         <div class="blackOut"></div>
-    </section>    <main>
+    </section>   
+     <main>
+         <nav id="filterBtns">
+             <div class="header filterBtn" data-id="all">All projects</div>
+             <div class="header filterBtn" data-id="3">3rd semester</div>
+             <div class="header filterBtn" data-id="2">2nd semester</div>
+             <div class="header filterBtn" data-id="1">1st semester</div>
+         </nav>
         <section id="thirdSemester">
             <h2 class="header">3rd semester</h2>
             <div></div>

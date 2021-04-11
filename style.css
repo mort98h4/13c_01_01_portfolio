@@ -66,7 +66,7 @@ a {
 
 .btn {
     cursor: pointer;
-    width: 250px;
+    width: 200px;
     text-align: center;
     background-color: var(--primCol);
     padding: 1rem 0;
@@ -75,7 +75,7 @@ a {
     font-weight: 600;
     transition: all 0.15s ease-out;
     color: var(--textCol);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -96,6 +96,7 @@ header {
     width: 100%;
     z-index: 10;
 }
+
 nav {
     background-color: transparent;
     transition: all 0.15s ease-in;
@@ -131,11 +132,11 @@ nav {
     max-width: 1200px;
 }
 
-.linkGroup {
+/* .linkGroup {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
+} */
 
 .navSubLinks {
     display: flex;
@@ -151,6 +152,7 @@ nav {
     text-shadow: 0 0 20px var(--thirCol);
     transition: all 0.15s ease-out;
     font-size: 2rem;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .navLinks a:hover {
@@ -283,6 +285,7 @@ article {
 
 .text {
     margin-bottom: 2rem;
+    word-break: break-word;
 }
 
 .buttons {
@@ -349,8 +352,12 @@ ul {
 }
 
 /***** PROJECTS.HTML *****/
-#thirdSemester, #secondSemester, #firstSemester article {
-    /* min-height: 100vh; */
+#thirdSemester {
+    margin-top: 3rem;
+}
+
+#thirdSemester h2, #secondSemester h2, #firstSemester h2 {
+    padding-left: 1rem;
 }
 
 /***** PROJECTS *****/
@@ -366,6 +373,31 @@ ul {
 
 .project .image img {
     clip-path: none;
+}
+
+#filterBtns {    
+    display: none;
+}
+
+.filterBtn {
+    font-family: 'Source Code Pro', monospace;
+    transition: all 0.15s ease-out;
+    cursor: pointer;
+    font-size: 1.2rem;
+    pointer-events: visible;
+}
+
+.filterBtn:hover {
+    -webkit-text-stroke: .033em var(--highCol);
+    text-shadow: 0 0 20px var(--highCol);
+}
+
+.navSubLinks a {
+    display: none;
+}
+
+.navSubLinks .filterBtn:first-of-type {
+    font-size: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -415,6 +447,28 @@ ul {
     .project:nth-of-type(2n) {
         flex-direction: row-reverse;
     }
+
+    #filterBtns {    
+        display: block;
+        position: sticky;
+        top: 56px;
+        background-color: var(--bgCol);
+        margin: 3rem auto 0;
+        padding: 1rem;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 2px solid var(--highCol);
+        z-index: 9;
+    }
+
+    .navSubLinks a {
+        display: block;
+    }
+
+    .navSubLinks .filterBtn {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -461,7 +515,21 @@ ul {
         justify-content: space-around;
     }
 
+    .btn {
+        font-size: 1.2rem;
+        width: 250px;
+    }
+
     .btn:first-child {
         margin-bottom: 0;
+    }
+
+    /***** PROJECTS *****/
+    #thirdSemester h2, #secondSemester h2, #firstSemester h2 {
+        padding-left: 0;
+    }
+
+    #filterBtns {
+        top: 60px;
     }
 }
