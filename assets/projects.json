@@ -1,0 +1,26 @@
+[
+    {
+        "project": "12c.03.01 Advanced Animation Project",
+        "semester": 3,
+        "shortDesc": "A short description of the Advanced Animation Project",
+        "longDesc": "A looooooooooooooooooooooooong description of the Advanced Animation Project",
+        "url": "http://mortengross.dk/kea/12_advanced_animation/12c_03_01_advanced_animation_project/potato_head/frontpage.html",
+        "image": "../assets/projects/12c_03_01.png"
+    },
+    {
+        "project": "2nd semester exam project: ByKop",
+        "semester": 2,
+        "shortDesc": "A short description of the 2nd semester exam project: ByKop",
+        "longDesc": "A looooooooooooooooooooooooong description of the 2nd semester exam project: ByKop",
+        "url": "http://mortengross.dk/kea/10_eksamen_2_sem/bykop/index.html",
+        "image": "../assets/projects/2nd_semester_exam.png"
+    },
+    {
+        "project": "1st semester exam project: Portfolio",
+        "semester": 1,
+        "shortDesc": "A short description of the 2nd semester exam project: Portfolio",
+        "longDesc": "A looooooooooooooooooooooooong description of the 2nd semester exam project: Portfolio",
+        "url": "http://mortengross.dk/kea/06_portfolio/index.html",
+        "image": "../assets/projects/1st_semester_exam.png"
+    }
+]
