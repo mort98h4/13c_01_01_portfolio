@@ -36,9 +36,9 @@ function displayProjects(projects) {
     console.log(projects);
 
     const temp = document.querySelector("#project_temp");
-    const dest3 = document.querySelector("#thirdSemester");
-    const dest2 = document.querySelector("#secondSemester");
-    const dest1 = document.querySelector("#firstSemester");
+    const dest3 = document.querySelector("#thirdSemester div");
+    const dest2 = document.querySelector("#secondSemester div");
+    const dest1 = document.querySelector("#firstSemester div");
 
     dest3.innerHTML = "";
     dest2.innerHTML = "";
