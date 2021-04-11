@@ -340,6 +340,19 @@ ul {
     min-height: 100vh;
 }
 
+/***** PROJECTS *****/
+.project {
+    min-height: 0 !important;
+}
+.project .content, .image {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.project .image img {
+    clip-path: none;
+}
+
 @media screen and (min-width: 768px) {
     /***** MENU *****/
     .navLinks {
