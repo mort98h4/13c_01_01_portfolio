@@ -5,6 +5,7 @@ const endTag = document.querySelector(".endTag").textContent;
 
 import { fadeInAnimation } from "/../scripts/header_animation.js";
 import {burgerMenu} from "/../scripts/menu.js";
+import {scrollAnimation} from "/../scripts/index_scroll.js";
 import {changeIconColor} from "/../scripts/social_icons.js";
 
 window.addEventListener("DOMContentLoaded", init);
@@ -19,5 +20,6 @@ function init() {
 
     fadeInAnimation(startTag, endTag);
     burgerMenu();
+    scrollAnimation("#aboutLong");
     changeIconColor();
 }
