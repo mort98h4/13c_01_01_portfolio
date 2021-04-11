@@ -30,7 +30,7 @@ export function burgerMenu() {
         burger.classList.toggle("toggle");
     })
 
-    gsap.to("nav", {
+    gsap.to("#menu", {
         backgroundColor: "var(--bgCol)",
         ease: "ease-in",
         scrollTrigger: {
