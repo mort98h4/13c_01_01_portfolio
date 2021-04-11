@@ -3,6 +3,9 @@
 const startTag = document.querySelector(".startTag").textContent;
 const endTag = document.querySelector(".endTag").textContent;
 
+let filterBy = "all";
+let allProjects;
+
 import {burgerMenu} from "/../scripts/menu.js";
 import {fadeInAnimation} from "/scripts/header_animation.js";
 import {changeIconColor} from "/../scripts/social_icons.js";
@@ -21,20 +24,59 @@ function init() {
     fadeInAnimation(startTag, endTag);
     burgerMenu();
     changeIconColor();
+
+    document.querySelectorAll(".filterBtn").forEach(button => {
+        button.addEventListener("click", selectFilter);
+        
+    })
 }
 
 async function loadJSON() {
     const url = "../assets/projects.json";
     const jsonData = await fetch(url);
-    const projects = await jsonData.json();
+    allProjects = await jsonData.json();
 
-    displayProjects(projects);
+    // displayProjects(allProjects);
+    setFilter(filterBy);
+}
+
+function selectFilter() {
+    if (window.innerWidth < 769) {
+        document.querySelector('.burgerMenu').classList.toggle("toggle");
+        document.querySelector('.linksContainer').classList.toggle("navActive");
+    }
+
+    const filter = this.dataset.id;
+    setFilter(filter);
+}
+
+function setFilter(filter) {
+    filterBy = filter;
+    buildList();
+}
+
+function filterList(filterBy) {
+    let filteredList = allProjects.filter(projectsFilter);
+
+    function projectsFilter(project) {
+        if (filterBy === "all") {
+            return allProjects;
+        } else if (project.semester.toString() === filterBy) {
+            return true;
+        }
+    }
+
+    return filteredList;
+}
+
+function buildList() {
+    const filteredList = filterList(filterBy);
+
+    displayProjects(filteredList);
 }
 
 function displayProjects(projects) {
-    console.log("displayProjects");
-    console.log(projects);
-
+    console.log(filterBy);
     const temp = document.querySelector("#project_temp");
     const dest3 = document.querySelector("#thirdSemester div");
     const dest2 = document.querySelector("#secondSemester div");
@@ -60,7 +102,32 @@ function displayProjects(projects) {
             dest2.appendChild(clone);
         } else {
             dest1.appendChild(clone);
-        }
-        
+        }     
     })
+
+    const thirdHeader = document.querySelector("#thirdSemester h2");
+    const secondHeader = document.querySelector("#secondSemester h2");
+    const firstHeader = document.querySelector("#firstSemester h2");
+
+    switch (filterBy) {
+        case '3':
+            thirdHeader.style.display = "block";
+            secondHeader.style.display = "none";
+            firstHeader.style.display = "none";            
+            break;
+        case '2':
+            thirdHeader.style.display = "none";
+            secondHeader.style.display = "block";
+            firstHeader.style.display = "none";
+            break;
+        case '1':
+            thirdHeader.style.display = "none";
+            secondHeader.style.display = "none";
+            firstHeader.style.display = "block";
+            break;
+        default:
+            thirdHeader.style.display = "block";
+            secondHeader.style.display = "block";
+            firstHeader.style.display = "block";
+    }
 }
