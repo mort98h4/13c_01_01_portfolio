@@ -351,7 +351,7 @@ ul {
     padding: 0;
 }
 
-/***** PROJECTS.HTML *****/
+/***** PROJECTS *****/
 #thirdSemester {
     margin-top: 3rem;
 }
@@ -360,15 +360,24 @@ ul {
     padding-left: 1rem;
 }
 
-/***** PROJECTS *****/
 .project {
     min-height: 0 !important;
     margin-bottom: 3rem;
 }
 
-.project .content, .project .image {
+/* .project .content, .project .image {
     opacity: 1;
     transform: translate(0,0);
+} */
+
+.fromRight {
+    transform: translateX(25vw);
+    opacity: 1;
+}
+
+.fromLeft {
+    transform: translateX(-25vw);
+    opacity: 1;
 }
 
 .project .image img {
@@ -469,6 +478,11 @@ ul {
     .navSubLinks .filterBtn {
         display: none;
     }
+
+
+    /* #thirdSemester .image:nth-child(2n) {
+        transform: translateX(-25vw);
+    } */
 }
 
 @media screen and (min-width: 1024px) {

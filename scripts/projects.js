@@ -7,7 +7,8 @@ let filterBy = "all";
 let allProjects;
 
 import {burgerMenu} from "/../scripts/menu.js";
-import {fadeInAnimation} from "/scripts/header_animation.js";
+import {fadeInAnimation} from "../scripts/header_animation.js";
+import {scrollAnimation} from "../scripts/projects_scroll.js";
 import {changeIconColor} from "/../scripts/social_icons.js";
 
 window.addEventListener("DOMContentLoaded", init);
@@ -76,7 +77,6 @@ function buildList() {
 }
 
 function displayProjects(projects) {
-    console.log(filterBy);
     const temp = document.querySelector("#project_temp");
     const dest3 = document.querySelector("#thirdSemester div");
     const dest2 = document.querySelector("#secondSemester div");
@@ -94,7 +94,7 @@ function displayProjects(projects) {
         clone.querySelector("a").href = project.url;
         clone.querySelector("img").src = project.image;
         clone.querySelector("img").alt = project.project;
-        //clone.querySelector("article").setAttribute("id", project[this]);
+        clone.querySelector("article").setAttribute("id", `article${project.id}`);
 
         if (project.semester === 3) {
             dest3.appendChild(clone);
@@ -102,8 +102,15 @@ function displayProjects(projects) {
             dest2.appendChild(clone);
         } else {
             dest1.appendChild(clone);
-        }     
-    })
+        }
+    });
+
+    for (let i = projects.length; i >= 0; i-=2) {
+        document.querySelector(`#article${i} .content`).classList.remove("fromRight");
+        document.querySelector(`#article${i} .content`).classList.add("fromLeft");
+        document.querySelector(`#article${i} .image`).classList.remove("fromLeft");
+        document.querySelector(`#article${i} .image`).classList.add("fromRight");
+    }
 
     const thirdHeader = document.querySelector("#thirdSemester h2");
     const secondHeader = document.querySelector("#secondSemester h2");
@@ -130,4 +137,7 @@ function displayProjects(projects) {
             secondHeader.style.display = "block";
             firstHeader.style.display = "block";
     }
+
+    scrollAnimation();
+
 }
