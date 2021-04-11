@@ -1,12 +1,12 @@
 "use strict";
 
-export function scrollAnimation() {
+export function scrollAnimation(trigger) {
     gsap.to(".content", {
         y: "0px",
         opacity: "1",
         ease: "ease-in",
         scrollTrigger: {
-            trigger: "#aboutShort",
+            trigger: trigger,
             scrub: true,
             end: "top"
         }
@@ -16,7 +16,7 @@ export function scrollAnimation() {
         opacity: "1",
         ease: "ease-in",
         scrollTrigger: {
-            trigger: "#aboutShort",
+            trigger: trigger,
             scrub: true,
             end: "top"
         }

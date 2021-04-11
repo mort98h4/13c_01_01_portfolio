@@ -19,6 +19,6 @@ function init() {
 
     fadeInAnimation(startTag, endTag);
     burgerMenu();
-    scrollAnimation();
+    scrollAnimation("#aboutShort");
     changeIconColor();
 }
